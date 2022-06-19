@@ -26,8 +26,7 @@ where lower(player_name) <> 'Cristea'
 group by t.id_training
 having count(t.id_player) > 1;
 
---4. Selectati numele si varsta jucatorilor care au varsta mai mare decat media varstei si diferita de 33.
-
+--4) Selectati numele si varsta jucatorilor care au varsta mai mare decat media varstei si diferita de 33.
 with avg_age as (
     select avg(player_age) Age
     from Player
@@ -39,9 +38,9 @@ where player_age > (
     from avg_age
     where nvl(player_age, 33) <> 33 and decode(player_age, player_age, player_age, 33) <> 33
 );
+--nvl si decode
 
 --5) Pentru echipele cu buget > 4000000, afisati bugetul. Pentru cele cu buget mai mic, afisati data curenta.
-
 select t.team_name, t.team_budget,
     case
         when (
@@ -56,3 +55,4 @@ select t.team_name, t.team_budget,
         )
     end
 from Team t;
+--case

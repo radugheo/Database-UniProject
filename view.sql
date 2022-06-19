@@ -1,3 +1,4 @@
+--alegem antrenorii care lucreaza cu un staff alcatuit din minim 21 de oameni
 create view vizualizare as(
     select c.coach_name
     from Coach c

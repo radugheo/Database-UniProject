@@ -8,3 +8,4 @@ nocycle;
 insert into League(id_league, league_size) values (auto_increment.nextval, 20);
 insert into League(id_league, league_size) values (auto_increment.nextval, 18);
 insert into League(id_league, league_size) values (auto_increment.nextval, 14);
+--secventa de autoincrement
